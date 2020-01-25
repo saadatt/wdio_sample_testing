@@ -45,8 +45,9 @@
    #####  ... expect().to.equal()  
    is a generic construction that essentially validates the output or task of the function.
    
-![](img/pic_webdriverio.jpg)
+![](img/webdriverio.jpg)
 
 ##### Attachment
 
 * [Tests of Register page](test/register.spec.js)
+* [Tests of Diary page](test/createDailyReport.spec.js)
