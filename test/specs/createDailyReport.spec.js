@@ -29,6 +29,22 @@ describe('CREATE DAILY REPORT', () => {
         browser.pause(3000);
     });
 
+    it('should select Daily Report marks', () => {
+        const element1 = $(pageCreateDailyReportSelectors.mark2);
+        const element2 = $(pageCreateDailyReportSelectors.mark1);
+        const element3 = $(pageCreateDailyReportSelectors.mark3);
+        element1.click();
+        element2.click();
+        element3.click();
+        browser.pause(3000);
+    });
+
+    it('should select What Your Morale Was dropdown', () => {
+        const element = $(pageCreateDailyReportSelectors.morale);
+        element.selectByVisibleText(pageCreateDailyReport.morale);
+        browser.pause(3000);
+    });
+
     it('should fill out How Was Your Day field', () => {
         const element = $(pageCreateDailyReportSelectors.summary);
         element.setValue(pageCreateDailyReport.summary);
@@ -41,25 +57,9 @@ describe('CREATE DAILY REPORT', () => {
         browser.pause(3000);
     });
 
-    it('should select What Your Morale Was dropdown', () => {
-        const element = $(pageCreateDailyReportSelectors.morale);
-        element.selectByVisibleText(pageCreateDailyReport.morale);
-        browser.pause(3000);
-    });
-
     it('should select Daily Report mark1', () => {
         const element = $(pageCreateDailyReportSelectors.mark1);
         element.click();
-        browser.pause(3000);
-    });
-
-    it('should select Daily Report marks', () => {
-        const element1 = $(pageCreateDailyReportSelectors.mark2);
-        const element2 = $(pageCreateDailyReportSelectors.mark1);
-        const element3 = $(pageCreateDailyReportSelectors.mark3);
-        element1.click();
-        element2.click();
-        element3.click();
         browser.pause(3000);
     });
 
