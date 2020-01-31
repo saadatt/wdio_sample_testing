@@ -12,10 +12,15 @@ describe('CREATE DAILY REPORT', () => {
         $(pageLoginSelectors.emailInput).setValue('0.01lalala@gmail.com');
         $(pageLoginSelectors.passwordInput).setValue('ppaasswwoorrdd');
         $(pageLoginSelectors.submitButton).click();
-        browser.pause(3000);
+        browser.pause(5000);
+    });
+
+    it('should click Diary navigation link', () => {
+        const element = $(pageCreateDailyReportSelectors.diaryLink);
+        element.click();
         browser.url(URL_REPORT);
         browser.pause(8000);
-    });
+     });
 
     it('should have the correct heading', () => {
         const actual = $(pageCreateDailyReportSelectors.h1).getText();

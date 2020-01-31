@@ -67,8 +67,7 @@ const pageCreateDailyReport = {
     summary: 'worked hard, did that and that ',
     hours: '8',
     morale: '10 – I am pleased with everything!',
-    saveButtonText: 'Save',
-    diaryLink: 'Diary'
+    saveButtonText: 'Save'
 };
 
 const pageCreateDailyReportSelectors = {
@@ -80,7 +79,8 @@ const pageCreateDailyReportSelectors = {
     hours: 'form input[name="hours"]',
     morale: 'form select[name="morale"]',
     saveButton: 'form button[type="submit"]',
-    diaryLink: 'nav a[qa="diary-link"]'
+    diaryLink: 'nav a[qa="diary-link"]',
+    cardsLink: 'nav a[qa="cards-link"]'
 };
 
 const pageDiary = {
@@ -91,8 +91,38 @@ const pageDiarySelectors = {
     h1: 'h1',
 };
 
+const pageCreateFlashGroup = {
+    h1: 'FlashCards',
+    buttonText: 'Create',
+    notificationMessage: 'Get all Flash cards groups',
+    flashGroupName: 'QA-Basics',
+    flashGroupDescription: 'Defect is the difference between expected and actual result',
+};
+
+const pageCreateFlashGroupSelectors = {
+    groupName: 'form input[name="name"]',
+    groupDescription: 'form input[name="description"]',
+    createButton: 'button btn[qa="flash-create-new-group"]'
+};
+
+const pageCreateCourse = {
+    h1: 'Courses',
+    buttonText: 'Create new Course',
+    courseName: 'JS-Syntax',
+    courseDescription: 'JS-Practice',
+    access: 'All'
+};
+
+const pageCreateCourseSelectors = {
+    courseName: 'form input[name="name"]',
+    courseDescription: 'form input[name="description"]',
+    createButton: 'button btn[qa="flash-create-new-group"]',
+    coursesLink: 'nav a[qa="courses-link"]',
+    access: 'form select[name="accessType"]'
+};
 
 module.exports = {HOST, URL_REGISTER, URL_LOGIN, user, pageRegister, pageRegisterSelectors,
     pageLogin, pageLoginSelectors, pageConfirmation, pageConfirmationSelectors, pageCreateDailyReport,
-    pageCreateDailyReportSelectors, pageDiary, pageDiarySelectors};
+    pageCreateDailyReportSelectors, pageDiary, pageDiarySelectors, pageCreateFlashGroup,
+    pageCreateFlashGroupSelectors, pageCreateCourse, pageCreateCourseSelectors};
 

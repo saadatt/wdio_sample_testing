@@ -1,6 +1,8 @@
 ##                                   Project 
 ###               Unit testing with a use of WebdriverIO framework 
 
+![](images/webdriverio.png)
+
 #### Introduction & Package Installation Guide
  
    You’ll need Node.js installed (at least v8.11.2 or higher). Install WebdriverIO.
@@ -45,7 +47,6 @@
    #####  ... expect().to.equal()  
    is a generic construction that essentially validates the output or task of the function.
    
-![](images/webdriverio.png)
 
 ##### Attachment
 
