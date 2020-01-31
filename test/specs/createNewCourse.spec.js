@@ -3,7 +3,6 @@ const { HOST, URL_REGISTER, URL_LOGIN, user, pageRegister, pageRegisterSelectors
     pageCreateDailyReportSelectors, pageDiary, pageDiarySelectors, pageCreateFlashGroup,
     pageCreateFlashGroupSelectors, pageCreateCourse, pageCreateCourseSelectors } = require('./register_data');
 
-const URL_FLASH = 'https://stage.pasv.us/course';
 
 const {expect} = require('chai');
 
@@ -20,7 +19,7 @@ describe('CREATE A COURSE', () => {
         const element1 = $(pageCreateCourseSelectors.coursesLink);
         element1.click();
         browser.pause(1000);
-        browser.$('//a[@class=\'btn btn-primary\']').click();
+        browser.$('//button[@class=\'btn btn-primary\']').click();
         browser.pause(5000);
     });
 

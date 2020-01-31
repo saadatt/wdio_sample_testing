@@ -121,8 +121,25 @@ const pageCreateCourseSelectors = {
     access: 'form select[name="accessType"]'
 };
 
+const pageQuiz = {
+    h1: 'Create Question Group',
+    buttonText: 'Save',
+    groupName: 'JS-Syntax',
+    groupDescription: 'Arrays',
+    acceptableMistakes: '2'
+};
+
+const pageQuizSelectors = {
+    h1: 'h1',
+    groupName: 'form input[name="name"]',
+    groupDescription: 'form input[name="description"]',
+    saveButton: 'form button[type="submit"]',
+    quizLink: 'nav a[qa="quiz-link"]',
+    acceptableMistakes: 'form input[name="acceptableMistakes"]'
+};
+
 module.exports = {HOST, URL_REGISTER, URL_LOGIN, user, pageRegister, pageRegisterSelectors,
     pageLogin, pageLoginSelectors, pageConfirmation, pageConfirmationSelectors, pageCreateDailyReport,
     pageCreateDailyReportSelectors, pageDiary, pageDiarySelectors, pageCreateFlashGroup,
-    pageCreateFlashGroupSelectors, pageCreateCourse, pageCreateCourseSelectors};
+    pageCreateFlashGroupSelectors, pageCreateCourse, pageCreateCourseSelectors, pageQuiz, pageQuizSelectors};
 

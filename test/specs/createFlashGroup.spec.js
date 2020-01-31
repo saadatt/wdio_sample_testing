@@ -3,8 +3,6 @@ const { HOST, URL_REGISTER, URL_LOGIN, user, pageRegister, pageRegisterSelectors
     pageCreateDailyReportSelectors, pageDiary, pageDiarySelectors, pageCreateFlashGroup,
     pageCreateFlashGroupSelectors } = require('./register_data');
 
-const URL_FLASH = 'https://stage.pasv.us/flash';
-
 const {expect} = require('chai');
 
 describe('CREATE NEW FLASH GROUP', () => {
