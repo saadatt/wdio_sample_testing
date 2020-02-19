@@ -8,22 +8,33 @@ const {expect} = require('chai');
 describe('CREATE NEW FLASH GROUP', () => {
     before('Login as admin', () => {
         browser.url(URL_LOGIN);
-        $(pageLoginSelectors.emailInput).setValue('0.01lalala@gmail.com');
+        $(pageLoginSelectors.emailInput).setValue('0.40lalala@gmail.com');
         $(pageLoginSelectors.passwordInput).setValue('ppaasswwoorrdd');
         $(pageLoginSelectors.submitButton).click();
         browser.pause(5000);
     });
 
     it('should click CARDS navigation link', () => {
-        const element1 = $(pageCreateDailyReportSelectors.cardsLink);
+        const element1 = $('nav a[qa="cards-link"]');
         element1.click();
-        browser.pause(5000);
-       // driver.findElement(By.xpath("//button[1]")).click();
-        //const locator = "button[qa*='flash-create-new-group']";
-        //driver.findElement(By.cssSelector(locator)).click();
-        browser.$('//button[@class=\'btn btn-secondary\']').click();
-        browser.pause(5000);
     });
+        //it('should click button Cards', () => {
+            //browser.$('//div[@id="site-menu"]//a[@qa="cards-link"]').click;
+            // browser.pause(5000);
+            // browser.$('//button[@class=\'btn btn-secondary\']').click();
+       // });
+            it('should click button Create new FlashGroup', () => {
+        browser.$('//button[@qa="flash-create-new-group"]').click();
+    });
+    it('should check if modal form is open', () => {
+        const el = browser.$('//div[contains(@class,"sidepanel"]');
+        expect(el.isDisplayed()).true;
+
+    });
+    it('should check if modal window title is correct', () => {
+        expect($(selectors.modalWindowTitle).getText()).eq('Create Flash Group');
+    });
+
 
     it('should have correct heading', () => {
         const actual = $(pageRegisterSelectors.h1).getText();
